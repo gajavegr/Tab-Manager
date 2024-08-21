@@ -1,0 +1,62 @@
+<!-- popup.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tab Manager</title>
+  <script src="popup.js"></script>
+  <style>
+    /* Add some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    #tabsList {
+      padding-left: 20px;
+    }
+
+    #tabCount {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4CSR60SN6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4CSR60SN6');
+</script>
+
+<body>
+  <h2>Tab Manager <span id="tabCount">(Loading...)</span></h2>
+  <button id="exportBtn">Export Tabs</button>
+  <br>
+  <br>
+  <label for="importBtn">Import Tabs:</label>
+  <input type="file" id="importBtn" accept=".json">
+  <br>
+  <br>
+  <input type="checkbox" id="selectiveCheckbox">
+  <label for="selectiveCheckbox"> Selective Opening</label>
+  <br>
+  <br>
+  <label for="fileNameInput">Export File Name:</label>
+  <input type="text" id="fileNameInput" placeholder="Enter a name">
+  <br>
+  <br>
+  <div id="tabsList"></div>
+  <button id="openSelectedBtn">Open Tabs</button>
+</body>
+
+</html>
