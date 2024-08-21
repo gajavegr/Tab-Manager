@@ -54,7 +54,10 @@ function updateTabCount() {
   
       chrome.downloads.download({
         url: url,
-        filename: `${fileName}.json`, // Use the specified or default name with the .json extension
+        filename: `Tab Manager JSONs/${fileName}`, // Path within the Downloads folder
+        conflictAction: 'uniquify'
+      }, function(downloadId) {
+        console.log(`Download started: ${downloadId}`);
       });
     });
   }
